@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>formulario</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>nao sei</legend>
+            <p>
+                <label for="inome">Nome: </label>
+                <input type="text" name="Nome" id="inome">
+            </p>
+            <p>
+                <label for="isobrenome">Sobrenome:</label> 
+                <input type="text" name="Sobrenome" id="isobrenome">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>nao sei</legend>
+            <p>
+                <label for="inome">Nome</label>
+                <input type="text" name="nome" id="inome" required maxlength="30" size="30" placeholder="Nome completo" autocomplete="name">
+            </p>
+            <p>
+                <label for="imedia">Média</label>
+                <input type="number" name="media" id="imedia" max="10" min="0" placeholder="0 a 10" step="0.1" required>
+            </p>
+            <p>
+                <label for="imes">periodo letivo</label>
+                <input type="month" name="mes" id="imes" value="2025-03">
+            </p>
+            <p>
+                <label for="idia">Dia</label>
+                <input type="date" name="dia" id="idia" value="2025-03-17">
+            </p>
+            <p>
+                <label for="ihora">hora da prova</label>
+                <input type="time" name="hora" id="ihora" value="16:59">
+            </p>
+            <p>
+                <label for="iemail">Email</label>
+                <input type="email" name="email" id="iemail" autocomplete="email" required placeholder="email">
+            </p>
+            <p>
+                <label for="itel">Telefone</label>
+                <input type="tel" name="tel" id="itel" pattern="^/d{4-5}-/d{4}$" required placeholder="44444-4444">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="Sexo" id="isxmas" checked><label for="isxmas">Masculino</label>
+            <input type="radio" name="Sexo" id="isxfem"><label for="isxfem">Feminino</label>
+        </fieldset>
+        <fieldset>
+            <legend>Esportes favoritos</legend>
+            <input type="checkbox" name="esbas" id="iesbas"> <label for="iesbas">Basquete</label> <br>
+            <input type="checkbox" name="esfut" id="iesfut"> <label for="iesfut">Futebol </label><br>
+            <input type="checkbox" name="esnat" id="iesnat"> <label for="iesnat">Natação</label> <br>
+            <input type="checkbox" name="esten" id="iesten"> <label for="iesten">Tênis</label> <br>
+        </fieldset>
+        <fieldset>
+            <legend>cor range e file</legend>
+            <p>
+                <label for="icor">Cor: </label>
+                <input type="color" name="Cor" id="icor" value="#00EEFF">
+            </p>
+
+            <p>
+                <label for="inivel">Nivel de satisfação</label>
+                <input type="range" name="nivel" id="inivel" min="1" max="5" value="1">
+            </p>
+            <p>
+                <label for="ifoto">Foto do perfil:</label>
+                <input type="file" name="Foto" id="ifoto">
+            </p> 
+            <!-- file tem que ser post, e nao get -->
+        </fieldset>
+        <fieldset>
+            <legend>estados</legend>
+            <p>
+                <label for="iestado">Estados</label>
+                <select name="estado" id="iestado">
+                    <option value="" selected>----------Escolha----------</option>
+                    <optgroup label="Região Norte">
+                        <option value="AC">Acre</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="PA">Pará</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                    </optgroup>
+                    <optgroup label="Região Nordeste">
+                        <option value="AL">Alagoas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </optgroup>
+                    <optgroup label="Região Centro-Oeste">
+                        <option value="GO">Goiás</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                    </optgroup>
+                    <optgroup label="Região Sudeste">
+                        <option value="ES">Espírito Santo</option>
+                        <option value="MS">Minas Gerais</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="SP">São Paulo</option>
+                    </optgroup>
+                    <optgroup label="Região Sul">
+                        <option value="PR">Paraná</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="SC">Santa Catarina</option>
+                    </optgroup>
+                </select>
+            </p>
+
+            <p>
+                <label for="iprof">Profissão</label>
+                <input type="text" name="prof" id="iprof" list="lstprof">
+                <datalist id="lstprof">
+                    <option value="ADM">admin</option>
+                    <option value="cont">contabilista</option>
+                    <option value="dev">desenvolvedor</option>
+                </datalist>
+            </p>
+            <p>
+                <label for="imsg">mensagem</label>
+                <textarea name="msg" id="imsg" cols="30" rows="10" placeholder="sua mensagem"></textarea>
+            </p>
+        </fieldset>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+
+
+</body>
+</html>
