@@ -222,11 +222,15 @@ section#sobre p {
 }
 
 .button-arrow{
+  position: relative;
+  bottom: -140px;
   width: 50px;
   height: 50px;
+  margin-bottom: 50px;
   background-color: var(--color-first);
   box-shadow: 5px 5px 0px black;
   cursor: pointer;
+
 }
 
 .button-arrow::before{
@@ -248,14 +252,84 @@ section#sobre p {
   display: none;
 }
 
+.node-card{
+  display: inline-flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  position: relative;
+}
+
+.node-card::before{
+  content: "";
+  position: absolute;
+  bottom: 140px;
+  box-sizing: border-box;
+  height: 0px;
+  width: 40px;
+  border: 2.5px dashed black;
+  transform: rotate(90deg) translateX(-50%);
+}
+
 .node-card .title{
+  margin-bottom: 50px;
   font-size: 25px;
   font-family: var(--font-start);
   color: var(--color-first);
 }
+.--getninja{
+  background-color: var(--color-first);
+}
 
-.node-card img{
-  padding: 50px 20px;
-  background-color: yellow;
-  border: 4px solid black;
+.--bgdefault{
+  background-color: var(--color-warning);
+}
+
+div.logo{
+  display: flex;
+  align-items: center;
+  height: 140px;
+  padding: 0px 20px;
+  border: 5px solid black;
+}
+
+#container-sobre{
+  display: inline-flex;
+  flex-flow: row nowrap;
+  position: relative;
+  width: calc(100% - 120px);
+  overflow: hidden;
+}
+
+#sobre{
+  position: relative;
+  overflow: hidden;
+}
+
+#sobre::after{
+  content: "";
+  position: absolute;
+  left: 40px;
+  top: 194px;
+  display: block;
+  height: 3.5px;
+  width: calc(100% - 80px);
+  background-color: black;
+}
+
+#sobre::before{
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 194px;
+  display: block;
+  width: 100%;
+  border: 2.5px dashed black;
+  box-sizing: border-box;
+}
+
+#container-sobre > div{
+  display: flex;
+  flex-flow: row nowrap;
+  flex: auto;
+  justify-content: space-evenly;
 }
