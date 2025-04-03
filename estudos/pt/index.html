@@ -6,6 +6,7 @@
     <title>Portifólio</title>
     <link rel="stylesheet" href="estilo/mobile.css" />
     <link rel="stylesheet" href="estilo/style.css" />
+
   </head>
   <body>
     <header>
@@ -117,7 +118,7 @@
       </section>
       <section id="sobre">
         <h2>Sobre</h2>
-        <button class="button-arrow -right">
+        <button class="button-arrow -left">
           <span class="content">Avançar</span>
         </button>
 
@@ -166,7 +167,7 @@
             </figure>
           </div>
         </div>
-        <button class="button-arrow -left">
+        <button class="button-arrow -right">
           <span class="content">Voltar</span>
         </button>
         <p>
@@ -180,6 +181,23 @@
           Airsoft ou trocando ideias com amigos.
         </p>
       </section>
+      <section id="contatos">
+        <form action="formulario.js" method="get" autocomplete="on"><legend>Contatos</legend>
+          <label for="iname">Nome</label>
+          <input type="text" name="name" id="iname" autocomplete="name" required minlength="3" maxlength="30">
+          <label for="iEmail">Email</label>
+          <input type="email" name="email" id="iEmail" autocomplete="email" required>
+          <label for="imensagem">Mensagem</label>
+          <textarea name="mensagme" id="imensagem"></textarea>
+          <input type="submit" value="Enviar">
+        </form>
+      </section>
     </main>
+    <footer>
+      <a href="#" target="_blank"><img src="imagens/twitter 1.png" alt="twitter"></a>
+      <a href="#" target="_blank"><img src="imagens/youtube 1.png" alt="youtube"></a>
+      <a href="#" target="_blank"><img src="imagens/discord 1.png" alt="discord"></a>
+    </footer>
   </body>
+  <script src="script/components/carousel.js"></script>
 </html>
