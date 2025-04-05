@@ -79,13 +79,20 @@
 
 
     menu.addEventListener('click', function(){
-      menuOpen.style = 'transition: .2s; transform: translate(0px); backdrop-filter: blur(1px)'
+      menuOpen.style = 'display: flex; transition: .2s; transform: translate(0px);'
       filter.style = 'display: block'
     })
 
-    menuClose, filter.addEventListener('click', function(){
-      menuOpen.style = 'transform: translate(440px); transition: 0s'
+    filter.addEventListener('click', function(){
+      menuOpen.style = 'transform: translate(440px);'
       filter.style = 'display: none'
     })
+
+    menuClose.addEventListener('click', function(){
+      menuOpen.style = 'transform: translate(440px); display: none;'
+      
+      filter.style = 'display: none'
+    })
+
   </script>
 </html>
