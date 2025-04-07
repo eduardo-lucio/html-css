@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,6 +13,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <link rel="stylesheet" href="style/mobile.css" media="screen" />
+    <link rel="stylesheet" href="style/estilo.css" media="screen and (min-width: 660px)">
   </head>
   <body>
     <header>
@@ -26,8 +27,28 @@
         />
         <nav>
           <span class="material-symbols-outlined" id="menu">menu</span>
-        </nav>
+          <a href="#" class="link-ext"
+          ><span class="bi bi-trello"></span>Trello</a
+        >
+        <a href="#" class="link-ext"
+          ><span class="bi bi-discord"></span>Discord</a
+        >
+        <a href="#" class="link-ext"
+          ><span class="material-symbols-outlined">info</span>Wiki</a
+        >
+        <a href="#" class="link-ext"
+          ><span class="bi bi-play-fill"></span>Play</a
+        >
+        </nav>  
       </div>
+        <nav id="navigation-zone">
+            <a href="" class="linkname">Blog</a>
+            <a href="" class="linkname">Equipement calculator</a>
+            <a href="" class="linkname">Codes</a>
+            <a href="" class="linkname">World bosses timers</a>
+            <a href="" class="linkname">Maps</a>
+            <a href="" class="linkname">Marketplace</a>
+        </nav>
       <section id="menu-open">
         <div id="menu-close"><span class="bi bi-x"></span></div>
         <img src="assets/gpo-tiny.webp" alt="" width="120px" height="100px" />
@@ -77,10 +98,12 @@
       </section>
       <section id="conteudos">
         <nav id="secondnav"><a href="#">Home</a></nav>
-        <h2>Blog Posts</h2>
+        <h2 id="title">Blog Posts</h2>
         <article>
+        
           <section class="post">
             <a href="#">
+              <div class="filterwhite"></div>
               <div class="img"></div>
               <div class="text">
                 <h3>GPO TRELLO</h3>
@@ -92,16 +115,18 @@
           </section>
           <section class="post">
             <a href="#">
-              <div class="img" id="bg1"></div>
-              <h3>Begginer's Guide</h3>
-              <p>
-                A complete How-To basics guide of Grand Piece Online. Updated to
-                help you progress fast in GPO.
-              </p>
-            </a>
+                <div class="filterwhite"></div>
+                <div class="img" id="bg1"></div>
+                <h3>Begginer's Guide</h3>
+                <p>
+                  A complete How-To basics guide of Grand Piece Online. Updated to
+                  help you progress fast in GPO.
+                </p>
+              </div>
           </section>
           <section class="post">
             <a href="#">
+              <div class="filterwhite"></div>
               <div class="img" id="bg2"></div>
               <h3>How to be level 80</h3>
               <p>How to be level 80 ? That's what we're going to see.</p>

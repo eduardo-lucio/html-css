@@ -8,6 +8,7 @@
   text-decoration: none;
   text-overflow: clip;
   word-break: break-word;
+  font-weight: 400;
 }
 
 body,
@@ -44,7 +45,12 @@ header img {
   cursor: pointer;
   border-radius: 50%;
 }
-
+header > div > nav a.link-ext {
+  display: none;
+}
+#navigation-zone{
+  display: none;
+}
 #menu:hover, #menu-close:hover {
   background-color: #363636;
 }
@@ -140,14 +146,15 @@ a.link-ext span{
   background-image: url(../assets/gpotrello.webp);
   background-size: cover;
   background-position: center center;
-  width: 95%;
+  width: 99%;
   border-radius: 50px;
+  opacity: .8;
 }
 
 #banner{
   backdrop-filter: blur(15px) brightness(65%);
   color: white;
-  height: 600px;
+  height: 500px;
   border-radius: 50px;
   justify-content: center;
   align-items: center;
@@ -156,15 +163,18 @@ a.link-ext span{
   display: flex;
   flex-flow: column wrap;
   overflow: hidden;
+  padding: 20px;
 }
 
 #banner h1{
+  font-weight: 400;
   margin: 0px; 
   font-size: 3.5em;
 }
 
 #banner h2{
   font-size: 1.5em;
+  font-weight: 400;
 }
 
 #link-explore{
@@ -180,16 +190,23 @@ a.link-ext span{
 
 nav#secondnav{
   margin: 30px 0px 15px 5px;
+  display: block;
+  max-width: 60%;
+  margin: 30px auto 15px auto;
+  text-align: left;
 }
 
 nav#secondnav  a{
   color: white;
 }
 
-section#conteudos  h2{
+section#conteudos h2{
   color: white;
   font-size: 2em;
-  margin-bottom: 10px;
+  display: block;
+  max-width: 60%;
+  margin: 10px auto;
+  text-align: left;
 }
 
 article{
@@ -197,20 +214,20 @@ article{
   justify-content: space-evenly;
   align-content: flex-start;
   flex-flow: row wrap;
-  width: 80%;
+  width: 60%;
   margin: auto;
 }
+
 section.post a{
   color: white;
 }
 
-section.post a:hover{
-  filter: color(white);
-}
 section.post{
   display: flex;
+  position: relative;
   flex-flow: column nowrap;
   text-align: center;
+  justify-content: start;
   color: white;
   flex: 1 1 300px;
   margin: 10px;
@@ -228,6 +245,19 @@ section.post .img{
   width: 100%;
 }
 
+.filterwhite{
+  border-radius: 20px;
+  position: absolute;
+  opacity: 0;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  transition: .2s;
+}
+
+section.post > a:hover .filterwhite{
+  opacity: 0.2;
+}
 
 #bg1{
   background: url(../assets/beginnersguide.webp);
