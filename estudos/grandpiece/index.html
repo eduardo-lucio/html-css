@@ -12,11 +12,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="style/mobile.css"
-      media="screen and (max-width: 620px)"
-    />
+    <link rel="stylesheet" href="style/mobile.css" media="screen" />
   </head>
   <body>
     <header>
@@ -32,7 +28,7 @@
           <span class="material-symbols-outlined" id="menu">menu</span>
         </nav>
       </div>
-        <section id="menu-open">
+      <section id="menu-open">
         <div id="menu-close"><span class="bi bi-x"></span></div>
         <img src="assets/gpo-tiny.webp" alt="" width="120px" height="100px" />
         <a href="#" class="link-site"
@@ -57,8 +53,12 @@
           >Marketplace</a
         >
         <div id="barra"></div>
-        <a href="#" class="link-ext"><span class="bi bi-trello"></span>Trello</a>
-        <a href="#" class="link-ext"><span class="bi bi-discord"></span>Discord</a>
+        <a href="#" class="link-ext"
+          ><span class="bi bi-trello"></span>Trello</a
+        >
+        <a href="#" class="link-ext"
+          ><span class="bi bi-discord"></span>Discord</a
+        >
         <a href="#" class="link-ext"
           ><span class="material-symbols-outlined">info</span>Wiki</a
         >
@@ -67,31 +67,80 @@
         >
       </section>
     </header>
-    <main></main>
+    <main>
+      <section id="banner-contain">
+        <div id="banner">
+          <h1>grandpieceonline.com</h1>
+          <h2>The best community-made GPO content and tools</h2>
+          <a href="#" id="link-explore">Explore</a>
+        </div>
+      </section>
+      <section id="conteudos">
+        <nav id="secondnav"><a href="#">Home</a></nav>
+        <h2>Blog Posts</h2>
+        <article>
+          <section class="post">
+            <a href="#">
+              <div class="img"></div>
+              <div class="text">
+                <h3>GPO TRELLO</h3>
+                <p>
+                  This post contain all the information you need about GPO Trello.
+                </p>
+              </div>
+            </a>
+          </section>
+          <section class="post">
+            <a href="#">
+              <div class="img" id="bg1"></div>
+              <h3>Begginer's Guide</h3>
+              <p>
+                A complete How-To basics guide of Grand Piece Online. Updated to
+                help you progress fast in GPO.
+              </p>
+            </a>
+          </section>
+          <section class="post">
+            <a href="#">
+              <div class="img" id="bg2"></div>
+              <h3>How to be level 80</h3>
+              <p>How to be level 80 ? That's what we're going to see.</p>
+            </a>
+          </section>
+        </article>
+      </section>
+      <footer>
+        <div><img src="assets/gpo-tiny.webp" alt="gpo-logo" /></div>
+        <p>
+          Copyright © 2025. All rights reserved. This website is not affiliated
+          with or endorsed by Grand Quest Games, and it is not the official site
+          for *Grand Piece Online*. Content is for informational purposes only
+          and intended for fans.
+        </p>
+      </footer>
+    </main>
   </body>
 
   <script>
-    const menu = document.querySelector('#menu')
-    const menuOpen = document.querySelector('#menu-open')
-    const menuClose = document.querySelector('#menu-close')
-    const filter = document.querySelector('#escuro')
+    const menu = document.querySelector("#menu");
+    const menuOpen = document.querySelector("#menu-open");
+    const menuClose = document.querySelector("#menu-close");
+    const filter = document.querySelector("#escuro");
 
+    menu.addEventListener("click", function () {
+      menuOpen.style =
+        "display: flex; transition: .2s; transform: translate(0px);";
+      filter.style = "display: block";
+    });
 
+    filter.addEventListener("click", function () {
+      menuOpen.style = "transform: translate(440px);";
+      filter.style = "display: none";
+    });
 
-    menu.addEventListener('click', function(){
-      menuOpen.style = 'display: flex; transition: .2s; transform: translate(0px);'
-      filter.style = 'display: block'
-    })
-
-    filter.addEventListener('click', function(){
-      menuOpen.style = 'transform: translate(440px);'
-      filter.style = 'display: none'
-    })
-
-    menuClose.addEventListener('click', function(){
-      menuOpen.style = 'transform: translate(440px); display: none;'
-      filter.style = 'display: none'
-    })
-
+    menuClose.addEventListener("click", function () {
+      menuOpen.style = "transform: translate(440px); display: none;";
+      filter.style = "display: none";
+    });
   </script>
 </html>

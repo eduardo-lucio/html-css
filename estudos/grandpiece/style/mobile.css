@@ -1,19 +1,19 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
 
-
 * {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
   text-decoration: none;
+  text-overflow: clip;
+  word-break: break-word;
 }
 
 body,
 html {
   font-family: "Finger Paint", sans-serif;
   background-color: var(--color1);
-  overflow: hidden;
 }
 
 :root {
@@ -22,6 +22,7 @@ html {
   --color3: #E6AF42;
   --color4: #422D00;
   --color5: #332F28;
+  --color6: #1F1B16;
 }
 
 header > div {
@@ -49,7 +50,7 @@ header img {
 }
 
 #menu-open {
-  display: flex;
+  display: none;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
@@ -124,7 +125,7 @@ a.link-site:hover {
   width: 80%;
   background-color: var(--color5);
 }
-#menu-open a.link-ext{
+ #menu-open a.link-ext{
   background-color: var(--color3);
   color: var(--color4);
   margin-top: 15px;
@@ -132,4 +133,133 @@ a.link-site:hover {
 a.link-ext span{
   font-size: 26px;
   font-variation-settings: 'FILL' 1;
+}
+
+#banner-contain{
+  margin: auto;
+  background-image: url(../assets/gpotrello.webp);
+  background-size: cover;
+  background-position: center center;
+  width: 95%;
+  border-radius: 50px;
+}
+
+#banner{
+  backdrop-filter: blur(15px) brightness(65%);
+  color: white;
+  height: 600px;
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  overflow: hidden;
+}
+
+#banner h1{
+  margin: 0px; 
+  font-size: 3.5em;
+}
+
+#banner h2{
+  font-size: 1.5em;
+}
+
+#link-explore{
+  margin-top: 10px;
+  display: inline-block;
+  width: 120px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 30px;
+  background-color: var(--color3);
+  color: var(--color4);
+}
+
+nav#secondnav{
+  margin: 30px 0px 15px 5px;
+}
+
+nav#secondnav  a{
+  color: white;
+}
+
+section#conteudos  h2{
+  color: white;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+article{
+  display: flex;
+  justify-content: space-evenly;
+  align-content: flex-start;
+  flex-flow: row wrap;
+  width: 80%;
+  margin: auto;
+}
+section.post a{
+  color: white;
+}
+
+section.post a:hover{
+  filter: color(white);
+}
+section.post{
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+  color: white;
+  flex: 1 1 300px;
+  margin: 10px;
+  background-color: var(--color6);
+  border-radius: 20px;
+  padding-bottom: 40px;
+}
+
+section.post .img{
+  border-radius: 20px;
+  height: 150px;
+  background: url(../assets/gpotrello.webp);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+
+#bg1{
+  background: url(../assets/beginnersguide.webp);
+  background-size: cover;
+  background-position: center center;
+}
+
+#bg2{
+  background: url(../assets/how_to_be_level_80.webp);
+  background-size: cover;
+  background-position: center center;
+}
+
+section.post h3, section.post p{
+  padding: 10px 10px;
+}
+
+footer{
+  background-color: #EAE1D9;
+}
+
+footer img{
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+footer div{
+  display: flex;
+}
+footer p{
+  text-align: center;
+  color: var(--color4);
+  padding: 20px;
 }
