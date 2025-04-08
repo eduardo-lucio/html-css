@@ -3,6 +3,10 @@
     border-bottom: 2px solid var(--color3);
 }
 
+#com{
+    width: 80%;
+    margin: auto;
+}
 #conteudos p{
     color: white;
 }
