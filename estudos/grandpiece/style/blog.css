@@ -1,0 +1,82 @@
+#blog {
+  color: var(--color3);
+  border-bottom: 2px solid var(--color3);
+}
+
+article {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: flex-start;
+  flex-flow: row wrap;
+  width: 60%;
+  margin: auto;
+}
+
+section.post a {
+  color: white;
+}
+
+section.post {
+  display: flex;
+  position: relative;
+  flex-flow: column nowrap;
+  text-align: center;
+  justify-content: start;
+  color: white;
+  flex: 1 1 300px;
+  margin: 10px;
+  background-color: var(--color6);
+  border-radius: 20px;
+  padding-bottom: 40px;
+}
+
+section.post .img {
+  border-radius: 20px;
+  height: 150px;
+  background: url(../assets/gpotrello.webp);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+.filterwhite {
+  border-radius: 20px;
+  position: absolute;
+  opacity: 0;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  transition: 0.2s;
+}
+
+section.post > a:hover .filterwhite {
+  opacity: 0.2;
+}
+
+#bg1 {
+  background: url(../assets/beginnersguide.webp);
+  background-size: cover;
+  background-position: center center;
+}
+
+#bg2 {
+  background: url(../assets/how_to_be_level_80.webp);
+  background-size: cover;
+  background-position: center center;
+}
+
+section.post h3,
+section.post p {
+  padding: 10px 10px;
+}
+
+section#conteudos h2 {
+  color: white;
+  font-size: 2em;
+  display: block;
+  max-width: 60%;
+  margin: 10px auto;
+  text-align: left;
+}
+
+

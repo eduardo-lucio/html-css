@@ -1,5 +1,11 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap");
+@font-face {
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  src: url("../fonts/MaterialSymbolsOutlined[FILL\,GRAD\,opsz\,wght].woff2")
+    format("woff");
+}
 
 * {
   padding: 0px;
@@ -11,6 +17,20 @@
   font-weight: 400;
 }
 
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}
+
 body,
 html {
   font-family: "Finger Paint", sans-serif;
@@ -20,10 +40,12 @@ html {
 :root {
   --color1: #181818;
   --color2: #54442a;
-  --color3: #E6AF42;
-  --color4: #422D00;
-  --color5: #332F28;
-  --color6: #1F1B16;
+  --color3: #e6af42;
+  --color4: #422d00;
+  --color5: #332f28;
+  --color6: #1f1b16;
+  --color7: #d1c5b4;
+  --color8: #F7DFBB;
 }
 
 header > div {
@@ -48,10 +70,11 @@ header img {
 header > div > nav a.link-ext {
   display: none;
 }
-#navigation-zone{
+#navigation-zone {
   display: none;
 }
-#menu:hover, #menu-close:hover {
+#menu:hover,
+#menu-close:hover {
   background-color: #363636;
 }
 
@@ -61,7 +84,7 @@ header > div > nav a.link-ext {
   justify-content: center;
   align-items: center;
   background-color: var(--color1);
-  width:80%;
+  width: 80%;
   height: 100%;
   border-radius: 20px 0px 0px 20px;
   position: absolute;
@@ -72,7 +95,7 @@ header > div > nav a.link-ext {
   z-index: 2;
 }
 
-#escuro{
+#escuro {
   position: absolute;
   top: 0;
   left: 0;
@@ -87,7 +110,7 @@ header > div > nav a.link-ext {
 #menu-open span:not(span.bi-x) {
   margin-right: 10px;
 }
-#menu-close{
+#menu-close {
   border-radius: 50%;
   padding: 10px;
   align-self: flex-end;
@@ -96,13 +119,13 @@ header > div > nav a.link-ext {
   cursor: pointer;
 }
 
-#menu-open span.bi-x::before{
+#menu-open span.bi-x::before {
   display: inline;
   font-size: 50px;
   margin: 0px;
   color: white;
 }
-#menu-open img{
+#menu-open img {
   margin-bottom: 25px;
 }
 #menu-open a {
@@ -113,45 +136,57 @@ header > div > nav a.link-ext {
   color: white;
   height: 60px;
   border-radius: 30px;
-  transition: .1s;
+  transition: 0.1s;
 }
-a.link-site{
+a.link-site {
   width: 350px;
 }
 
 a.link-site:hover {
   background-color: var(--color2);
   color: white;
-  font-variation-settings: 
-  'FILL' 1
+  font-variation-settings: "FILL" 1;
 }
-#menu-open #barra{
+.barra {
   margin-top: 5px;
   height: 1px;
   width: 80%;
   background-color: var(--color5);
 }
- #menu-open a.link-ext{
+a.link-def{
+    background-color: var(--color3);
+    margin: 0px 10px;
+    padding: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--color4);
+    height: 30px;
+    border-radius: 30px;
+    transition: 0.1s;
+    align-self: center;
+}
+#menu-open a.link-ext {
   background-color: var(--color3);
   color: var(--color4);
   margin-top: 15px;
 }
-a.link-ext span{
+a.link-ext span {
   font-size: 26px;
-  font-variation-settings: 'FILL' 1;
+  font-variation-settings: "FILL" 1;
 }
 
-#banner-contain{
+#banner-contain {
   margin: auto;
   background-image: url(../assets/gpotrello.webp);
   background-size: cover;
   background-position: center center;
   width: 99%;
   border-radius: 50px;
-  opacity: .8;
+  opacity: 0.8;
 }
 
-#banner{
+#banner {
   backdrop-filter: blur(15px) brightness(65%);
   color: white;
   height: 500px;
@@ -166,18 +201,18 @@ a.link-ext span{
   padding: 20px;
 }
 
-#banner h1{
+#banner h1 {
   font-weight: 400;
-  margin: 0px; 
+  margin: 0px;
   font-size: 3.5em;
 }
 
-#banner h2{
+#banner h2 {
   font-size: 1.5em;
   font-weight: 400;
 }
 
-#link-explore{
+#link-explore {
   margin-top: 10px;
   display: inline-block;
   width: 120px;
@@ -188,7 +223,7 @@ a.link-ext span{
   color: var(--color4);
 }
 
-nav#secondnav{
+nav#secondnav {
   margin: 30px 0px 15px 5px;
   display: block;
   max-width: 60%;
@@ -196,100 +231,29 @@ nav#secondnav{
   text-align: left;
 }
 
-nav#secondnav  a{
+nav#secondnav a {
   color: white;
 }
 
-section#conteudos h2{
-  color: white;
-  font-size: 2em;
-  display: block;
-  max-width: 60%;
-  margin: 10px auto;
-  text-align: left;
+nav#secondnav span{
+    color: white;
 }
 
-article{
-  display: flex;
-  justify-content: space-evenly;
-  align-content: flex-start;
-  flex-flow: row wrap;
-  width: 60%;
-  margin: auto;
-}
-
-section.post a{
-  color: white;
-}
-
-section.post{
-  display: flex;
-  position: relative;
-  flex-flow: column nowrap;
-  text-align: center;
-  justify-content: start;
-  color: white;
-  flex: 1 1 300px;
-  margin: 10px;
-  background-color: var(--color6);
-  border-radius: 20px;
-  padding-bottom: 40px;
-}
-
-section.post .img{
-  border-radius: 20px;
-  height: 150px;
-  background: url(../assets/gpotrello.webp);
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-}
-
-.filterwhite{
-  border-radius: 20px;
-  position: absolute;
-  opacity: 0;
-  background-color: white;
-  height: 100%;
-  width: 100%;
-  transition: .2s;
-}
-
-section.post > a:hover .filterwhite{
-  opacity: 0.2;
-}
-
-#bg1{
-  background: url(../assets/beginnersguide.webp);
-  background-size: cover;
-  background-position: center center;
-}
-
-#bg2{
-  background: url(../assets/how_to_be_level_80.webp);
-  background-size: cover;
-  background-position: center center;
-}
-
-section.post h3, section.post p{
-  padding: 10px 10px;
-}
-
-footer{
-  background-color: #EAE1D9;
-}
-
-footer img{
-  margin: auto;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-footer div{
-  display: flex;
-}
-footer p{
-  text-align: center;
-  color: var(--color4);
-  padding: 20px;
-}
+footer {
+    background-color: #eae1d9;
+  }
+  
+  footer img {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  footer div {
+    display: flex;
+  }
+  footer p {
+    text-align: center;
+    color: var(--color4);
+    padding: 20px;
+  }

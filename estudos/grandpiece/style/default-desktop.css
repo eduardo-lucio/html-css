@@ -1,0 +1,85 @@
+:root {
+  --color1: #181818;
+  --color2: #54442a;
+  --color3: #e6af42;
+  --color4: #422d00;
+  --color5: #332f28;
+  --color6: #1f1b16;
+  --color7: #d1c5b4;
+}
+
+#menu {
+  display: none;
+}
+
+header > div > nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 600px;
+}
+header > div > nav span {
+  margin-right: 5px;
+}
+
+header > div > nav a.link-ext {
+  background-color: var(--color3);
+  padding: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--color4);
+  height: 60px;
+  border-radius: 30px;
+  transition: 0.1s;
+  align-self: center;
+  word-break: keep-all;
+}
+
+#navigation-zone {
+  margin: 10px auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 95%;
+}
+
+.linkname {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  color: var(--color7);
+  padding: 15px;
+  flex: 1 0 auto;
+}
+
+.linkname:hover {
+  background-color: var(--color5);
+}
+
+#navbarra {
+  margin: 5px auto 5px;
+  height: 1px;
+  width: 95%;
+  background-color: var(--color2);
+}
+
+footer {
+  background-color: #eae1d9;
+}
+
+footer img {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+footer div {
+  display: flex;
+}
+footer p {
+  text-align: center;
+  color: var(--color4);
+  padding: 20px;
+}
